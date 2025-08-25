@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api/auth", // ✅ just /api
+  baseURL: "https://cliff-u2q0.onrender.com/api/auth", // ✅ just /api
 });
 
 // Add token automatically if exists
