@@ -9,10 +9,13 @@ dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
-// ✅ Enable CORS
+// ✅ Enable CORS for local dev + vercel domain
 app.use(cors({
-    origin: "http://localhost:5173", // frontend URL (Vite default port)
-    credentials: true
+    origin: [
+        "http://localhost:5173",       // local development
+        "https://cliff-one.vercel.app" // your deployed frontend
+    ],
+    credentials: true,
 }));
 
 app.use(express.json());
